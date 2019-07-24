@@ -28,11 +28,6 @@ class Image
     end
     @location
   end
-
-  #  def distance
-  #    val = gets.chomp
-  #    @distance = val.to_i
-  #  end
     
   def blur(distance) 
     @distance = gets.chomp.to_i
@@ -43,7 +38,7 @@ class Image
     end
   end 
 end
-
+distance = @distnace
 
 image = Image.new([
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -66,8 +61,8 @@ image = Image.new([
 puts "Image Blur 3 Starting Image"
 image.output_image
 puts " "
-puts "Image Blur 2 Image"
+puts "Image Blur 3 Image"
 puts "What is the desired distance?"
 puts "(Challange Value = 3)"
-image.blur(@distance)
+image.blur(distance)
 image.output_image
